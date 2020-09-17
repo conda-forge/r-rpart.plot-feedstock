@@ -3,7 +3,7 @@ About r-rpart.plot
 
 Home: http://www.milbo.org/rpart-plot
 
-Package license: GPL-3
+Package license: GPL-3.0-only
 
 Feedstock license: BSD-3-Clause
 
