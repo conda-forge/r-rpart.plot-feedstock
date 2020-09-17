@@ -5,7 +5,7 @@ Home: http://www.milbo.org/rpart-plot
 
 Package license: GPL-3
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Plot 'rpart' models. Extends plot.rpart() and text.rpart() in the 'rpart' package.
 
