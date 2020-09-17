@@ -1,4 +1,4 @@
-{% set version = "3.0.8" %}
+{% set version = "3.0.9" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rpart.plot_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rpart.plot/rpart.plot_{{ version }}.tar.gz
-  sha256: 4d8c53b07bf5d4a767d277a3f95dd33573acf313775c19d1935312c225290079
+  sha256: 1150f5e9899b3b31b17160617cd99c3ad340c8361aeb229264a7a3a3a28015a4
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -25,10 +25,10 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-rpart >=4.1_10
+    - r-rpart >=4.1_15
   run:
     - r-base
-    - r-rpart >=4.1_10
+    - r-rpart >=4.1_15
 
 test:
   commands:
@@ -37,10 +37,11 @@ test:
 
 about:
   home: http://www.milbo.org/rpart-plot
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Plot 'rpart' models. Extends plot.rpart() and text.rpart() in the 'rpart' package.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
