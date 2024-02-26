@@ -1,4 +1,4 @@
-{% set version = "3.1.1" %}
+{% set version = "3.1.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rpart.plot_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rpart.plot/rpart.plot_{{ version }}.tar.gz
-  sha256: 30736240058df21a96d10912a091d938f821d521a3bc4efb9aa4ef6fb233024d
+  sha256: 3dca2a5d1a8e5eb5129fd6efce9c5f6b2fa241bfb65f2a8823a8db89f4b422b2
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
